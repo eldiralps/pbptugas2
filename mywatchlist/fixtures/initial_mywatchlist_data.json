@@ -1,0 +1,113 @@
+[
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":1,
+        "fields":{
+            "watched":"Yes",
+            "title":"Money Heist: Korea",
+            "rating": "8.8/10",
+            "release_date":"24 Juni 2022",
+            "review":"Secara garis besar ide ceritanya masih sama dengan series Spanyol, tetapi sang sutradara Kim Hong Sun menambahkan elemen berbeda yang disesuaikan dengan budaya Korea sehingga membawa kejutan baru bagi para penonton."
+
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":2,
+        "fields":{
+            "watched":"Yes",
+            "title":"Squid Game",
+            "rating": "9.3/10",
+            "release_date":"17 September 2021",
+            "review":"Para aktor totalitas dalam perannya masing-masing. Set yang begitu real dan sinematografi yang begitu baik membuat mata penonton begitu dimanjakan di sepanjang sembilan episode Squid Game."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":3,
+        "fields":{
+            "watched":"Yes",
+            "title":"The Queen's Gambit",
+            "rating": "9.7/10",
+            "release_date":"23 Oktober 2020",
+            "review":"Jalan ceritanya menarik di mana seorang perempuan ikut bertanding catur yang mana pada zamannya catur hanya digemari oleh pria"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":4,
+        "fields":{
+            "watched":"Not yet",
+            "title":"Anne with an E",
+            "rating": "9.7/10",
+            "release_date":"19 Maret 2017",
+            "review":"Film ini berhasil menggugah minat penonton dengan jalan cerita di mana karakter utama menangani masalah-masalah dalam hidup dengan cara yang menarik. Pesan positif dan moral di dalam filmnya juga terasa kuat."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":5,
+        "fields":{
+            "watched":"Yes",
+            "title":"Emily in Paris",
+            "rating": "9.1/10",
+            "release_date":"2 Oktober 2020",
+            "review":"Para aktor totalitas dalam perannya masing-masing. Set yang begitu real dan sinematografi yang begitu baik membuat mata penonton begitu dimanjakan di sepanjang sembilan episode Squid Game."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":6,
+        "fields":{
+            "watched":"Not yet",
+            "title":"Harry Potter",
+            "rating": "9.0/10",
+            "release_date":"16 November 2001",
+            "review":"Bergenre fantasi, film ini sukses meraup banyak penonton hingga saat ini. Jalan ceritanya menarik, imajinatif, lucu, menakutkan, dan ajaib sehingga membuat penonton selalu ketagihan menontonnya."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":7,
+        "fields":{
+            "watched":"Yes",
+            "title":"Bridgerton",
+            "rating": "9.3/10",
+            "release_date":"17 September 2021",
+            "review":"Para aktor totalitas dalam perannya masing-masing sebagai kaum elit di Inggris. Terdapat plot twist di dalamnya yang akan membuat penonton semakin penasaran akan ending dari film ini."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":8,
+        "fields":{
+            "watched":"Yes",
+            "title":"Bird Box",
+            "rating": "8.4/10",
+            "release_date":"14 Desember 2018",
+            "review":"Film ini berhasil menciptakan suasana menegangkan sekaligus mengharukan saat ditonton. Namun, ending pada film ini dirasa kurang memuaskan sehingga perlu adanya sekuel film ini."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":9,
+        "fields":{
+            "watched":"Not yet",
+            "title":"Inventing Anna",
+            "rating": "8.3/10",
+            "release_date":"11 Februari 2022",
+            "review":"Film ini disuguhkan sedemikian rupa sehingga sulit bagi penonton untuk menebak-nebak jalan ceritanya. Film Inventing Anna mengandung pesan moral yang kuat sehingga film ini menarik untuk ditonton."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":10,
+        "fields":{
+            "watched":"Not yet",
+            "title":"We Can Be Heroes",
+            "rating": "6.2/10",
+            "release_date":"25 Desember 2020",
+            "review":"Jalan cerita pada film ini mudah ditebak dan mengandung kekerasan di dalamnya, padahal film ini dikemas dengan gaya anak-anak. Namun, film ini mengajarkan nilai tentang kerjasama dan kepemimpinan yang menjadkani hal positif kuat dalam film ini."
+        }
+    }
+]
