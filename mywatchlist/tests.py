@@ -1,18 +1,14 @@
-from django.test import TestCase
-from mywatchlist.models import MyWatchList
+from unittest import result
+from django.test import TestCase, Client
 
 # Create your tests here.
 class MyWatchListTesting(TestCase):
-    def sendTesting(self):
-        MyWatchList.objects.create(watched="Yes", title="Direktur Sombong Meninggal Tergelircir ke Sumur", rating="9/10", 
-            release_date="12 Juni 2022", review="Banyak nilai moralnya dan sangat menarik perhatian penonton khususnya ibu rumah tangga.")
-
-    def testAtributtes(self):
-        sinetron = MyWatchList.objects.get(watched="Yes", title="Direktur Sombong Meninggal Tergelircir ke Sumur", rating="9/10", 
-            release_date="12 Juni 2022", review="Banyak nilai moralnya dan sangat menarik perhatian penonton khususnya ibu rumah tangga.")
-        
-        self.assertEqual(sinetron.watched, "Yes")
-        self.assertEqual(sinetron.title, "Direktur Sombong Meninggal Tergelircir ke Sumur")
-        self.assertEqual(sinetron.rating, "9/10")
-        self.assertEqual(sinetron.release_date, "12 Juni 2022")
-        self.assertEqual(sinetron.review, "Banyak nilai moralnya dan sangat menarik perhatian penonton khususnya ibu rumah tangga.")
+    def tes_url_html(self):
+        response = Client().get('/mywatchlist/html/')
+        self.assertEqual(response.status_code, 200)
+    def tes_url_xml(self):
+        response = Client().get('/mywatchlist/xml/')
+        self.assertEqual(response.status_code, 200)
+    def tes_url_json(self):
+        response = Client().get('mywatchlist/json/')
+        self.assertEqual(response.status_code, 200)
