@@ -1,7 +1,6 @@
 [LINK APLIKASI](http://mvt-djangoapp.herokuapp.com/mywatchlist/) <br>
-[Screenshot POSTMAN 1](https://drive.google.com/file/d/1-hvWSeRhYxg54zl_UGNE7WupSOxx9qt2/view?usp=sharing) <br>
-[Screenshot POSTMAN 2](https://drive.google.com/file/d/11hz08V-ZO81CIUhrSynzhog_E8K2sEdE/view?usp=sharing) <br>
-[Screenshot POSTMAN 3](https://drive.google.com/file/d/1VP6T1mwu3VFsJVlOWpt5LgU_vXgvtcTJ/view?usp=sharing) <br>
+[Screenshot POSTMAN](https://docs.google.com/document/d/1hqBnLxwLJA_cdds12SH2tl-S1hD_1UUbLG82ZXDdwOA/edit?usp=sharing) <br>
+
 <br>
 1. Jelaskan perbedaan antara JSON, XML, dan HTML! <br>
 HTML (HyperText Markup Language) adalah suatu bahasa yang menggunakan tanda-tanda tertentu (tag) untuk menyatakan kode-kode yang harus ditafsirkan oleh browser untuk mengatur dan memformat halaman sebuah website dan dokumen lainnya yang ada di World Wide Web. HTML menitikberatkan pada penyajian data (seperti bagaimana format tampilan suatu data), sementara XML berfokus pada transfer data (berupa struktur dan konteksnya.
