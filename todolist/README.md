@@ -58,3 +58,71 @@ Ya, dengan cara merender setiap field secara manual, seperti pada potongan kode 
 - Lakukan git add, commit, dan push kemudian jalankan aplikasinya yang telah di-deploy ke Heroku dan mendaftarkan 2 akun pengguna dan tiga dummy data.
 
 
+
+# TUGAS 5 : Web Design Using HTML, CSS, and CSS Framework
+<br>
+<hr>
+
+## Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
+1. Inline Style: Atribut `<style>` digunakan untuk memberikan style ke tag HTML tertentu. Inline CSS dapat berguna pada saat kita tidak memiliki akses ke file CSS atau harus mengubah style untuk 1 elemen saja.
+<br>
+
+### Kekurangan:
+- Inline CSS harus diterapkan pada setiap elemen
+
+### Kelebihan:
+- Berguna ingin menguji dan melihat perubahan
+- Permintaan HTTP yang lebih kecil
+<br>
+
+2. Internal Style:  diletakkan di dalam bagian `<head>` pada halaman. Class dan ID bisa digunakan untuk merujuk pada kode CSS, namun hanya akan aktif pada halaman tersebut. Style CSS yang dipasang dengan metode ini akan di-download setiap kali halaman dipanggil, jadi dapat meningkatkan kecepatan akses.
+<br>
+
+### Kekurangan:
+-  Meningkatkan waktu akses website
+- Tidak efisien apabila ingin menggunakan CSS yang sama pada beberapa file karena perubahan hanya pada 1 halaman
+### Kelebihan:
+- Tidak perlu meng-upload beberapa file karena HTML dan CSS bisa digunakan di file yang sama.
+- Perubahan hanya terjadi pada 1 halaman
+
+3. External Style: kode CSS ditulis terpisah dengan kode HTML sehingga perlu dibuat file berektensi `.css` yang berisi style yang akan digunakan. File CSS eksternal biasanya diletakkan setelah bagian `<head>` pada halaman HTML bagian `<link>`
+### Kekurangan:
+-  Halaman belum tampil secara sempurna hingga file CSS selesai dipanggil
+### Kelebihan:
+- Ukuran file HTML menjadi lebih kecil dan strukturnya lebih rapi
+- Kecepatan loading menjadi lebih cepat
+- File CSS yang sama bisa digunakan di banyak halaman
+<br>
+
+## Jelaskan tag HTML5 yang kamu ketahui.
+`<!DOCTYPE>` mendefinisikan jenis document
+`<a>` mendefinisikan hyperlink
+`<div>` mendefinisikan bagian dalam suatu document
+`<form>` mendefinisikan formulir
+`<h1>` sampai `<h6>` mendefisikan header
+`<head>` mendefinisikan informasi tentang document
+`<link>` mendefinisikan refrensi sumber
+`<meta>` mendefinisikan meta information
+`<p>` mendefinisikan paragrap
+`<table>` mendefinisikan table
+`<td>  ` mendefinisikan table cel
+`<thead>` mendefinisikan table header
+`<title>` mendefinisikan judul document
+`<tr>` mendefinisikan baris table
+<br>
+
+## Jelaskan tipe-tipe CSS selector yang kamu ketahui.
+1. Element Selector : cara untuk memilih semua elemen dengan nama tag yang diberikan dalam dokumen, dan menerapkan gaya yang sama untuk setiap elemen dengan nama tag tertentu.
+<br>
+
+2. ID Selector : digunakan untuk menyeleksi elemen berdasarkan ID tertentu. Dalam penggunaannya, ID selector diawali dengan tanda pagar (#) atau hash.
+<br>
+
+3. Class Selector : memilih elemen dengan atribut kelas tertentu. Untuk memilih elemen dengan kelas tertentu, tulis karakter titik (.), kemudian ikuti dengan nama kelas.
+
+<br>
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Tambahkan `<!DOCTYPE html>`, 
+- Tambahkan tag `<link>` pada bagian `<head>` untuk menggunakan CDN dari bootstrap.
+- Tambahkan styling seperti warna text, container, table, background color, dan buat setiap file html menjadi responsive yakni untuk halaman registrasi, login, todolist, dan create_task dengan cara menambahkan potongan kode`<meta name="viewport" content="width=device-width, initial-scale=1">`
