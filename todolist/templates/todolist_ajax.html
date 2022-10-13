@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+ <html lang="en" >
+     <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Todolist Page</title>
+            <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+            <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Muli'>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+                         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.modal').hide();
+                    $.get('/todolist/json', function(todolist) {
+                        let content = '';
+                        for (let i = 0; i < data.length; i++) {
+                            content += `
+                            <div class="bg-danger hover:scale-105">
+                                <p class ="text-white font-weight-bold">{data[i].fields.date}</p>
+                                <p class ="text-white font-weight-bold">{data[i].fields.title}</p>
+                                <p class ="text-white font-weight-bold">{data[i].fields.description}</p>
+                      
+                            </div>
+                            `;
+                            $('.content').html(content);
+                        }
+                    })
+                })
+            </script>
+            <!-- click add task button -->
+            <script>
+                $(document).ready( function(){
+                    $('.add-task').click( function(){
+                        $('.modal').toggle();
+                    })
+                })
+            </script>
+            <!-- click submit task button in modal after adding new task-->
+            <script>
+                $(document).ready( function(){
+                    $('.submit-task-button').click( function(){
+                        let title = $('.title').val();
+                        let description = $('.desctription').val();
+                        let CSRFtoken = $('input[name="csrfmiddlewaretoken"]').val();
+                        console.log(CSRFtoken);
+                        $.post('/todolist/add/', {
+                            title: title,
+                            description: description,
+                            crsfmiddlewaretoken: CSRFtoken,
+                            }, 
+                            function() {
+                                $('.modal').hide();
+                                $.get('/todolist/json', function(todolist) {
+                                let content = '';
+                                for (let i = 0; i < data.length; i++) {
+                                    content += `
+                                        <div class="bg-danger hover:scale-105">
+                                            <p class ="text-white font-weight-bold">{data[i].fields.date}</p>
+                                            <p class ="text-white font-weight-bold">{data[i].fields.title}</p>
+                                            <p class ="text-white font-weight-bold">{data[i].fields.description}</p>
+                      
+                                        </div>
+                                        `;
+                                    $('.content').html(content);
+                                }
+                                })
+                            })
+                        })
+
+                    }) 
+            </script>
+     </head>
+     <body>
+        <div class="container justify-content-center align-items-center">
+            <div class="absolute top-0 text-dark flex flex-row justify-content-around align-items-center bg-dark">
+                <h1 class="text-center font-weight-bolder text-white">&#128221; My To Do List &#128221;</h1>
+                <div class="flex flex-row align-items-center font-weight-bold">
+                  <button class="add-task btn btn-dark text-white hover:bg-danger hover:cursor-pointer px-4 py-2 rounded-lg">Add Task</button>
+                  <a href="{% url 'todolist:create-task' %}"><button class="bg-danger hover-overlay hover-zoom hover-shadow ripple">Tambah Task Baru</button></a>
+                  <a href="{% url 'todolist:logout' %}"><button class="bg-danger hover-overlay hover-zoom hover-shadow ripple">Logout</button></a>
+                </div>
+              </div>
+              
+              <h1 class="absolute top-16 mb-1 text-center text-xl font-size:16px; line-height: 20px; font-weight-bold">Hi, {{username}} !</h1>
+            
+              <!-- todolist contents -->
+              <div class="content absolute top-24 mb-3 grid grid-flow-cols lg:grid-cols-2 sm:grid-cols-1 gap-5 p-5 rounded-xl text-dark"></div>
+            
+              <!-- modals -->
+              <form method="POST" action="">
+                {% csrf_token %}
+              <div class="modal absolute flex flex-col justify-content-center align-items-center rounded-xl hover:scale-105 duration-150">
+                
+                <h1 class="text-2xl font-bold mb-4">ADD NEW TASK</h1>
+                <div class="flex flex-column m-1">
+                  <label class="font-semibold">Judul</label>
+                  <input class="title bg-dark rounded-lg border-[1px] border-black text-white" placeholder="title" required>
+                </div>
+                <div class="flex flex-col m-1">
+                  <label class="font-semibold">Deskripsi</label>
+                  <input class="description bg-dark border-[1px] border-black text-white" placeholder="description" required>
+                </div>
+                <button class="submit-task-button m-3 bg-danger hover:cursor-pointer px-6 py-2 rounded-lg">ADD</button>
+            
+            </div>
+            </form>
+            
+        </div>
+     </body>

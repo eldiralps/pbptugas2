@@ -119,7 +119,6 @@ Ya, dengan cara merender setiap field secara manual, seperti pada potongan kode 
 <br>
 
 3. Class Selector : memilih elemen dengan atribut kelas tertentu. Untuk memilih elemen dengan kelas tertentu, tulis karakter titik (.), kemudian ikuti dengan nama kelas.
-
 <br>
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
